@@ -8,8 +8,8 @@
 					 <div class="row">
   			  	 <div class="col-lg-6">
 							 <button type="button" (click)="mostrarNewEdit('Nuevo')" class="btn btn-primary"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Nuevo</button>
-               <br>
 						 </div>
+
              <div class="col-lg-6">
                 <div class="input-group">
                   <span class="input-group-btn">
@@ -31,7 +31,7 @@
              <thead class="thead-light">
                <tr>
 								 <th scope="col">Nombre</th>
-                 <th scope="col">Descripcion</th>
+                 <th scope="col">Descripción</th>
                  <th width="200px"></th>
               </tr>
             </thead>
@@ -42,7 +42,7 @@
                   <div class="divBotones" *ngIf="confirmar==null">
                      <div class="row text-center" >
                         <div class="col-sm-6">
- 													<a (click)="deleteConfirmar(pendiente.id)" class="btn btn-danger btn-sm " role="button"><i class="fa fa-calendar-times-o" aria-hidden="true"></i> Elimnar</a>
+ 													<a (click)="deleteConfirmar(pendiente.id)" class="btn btn-danger btn-sm " role="button"><i class="fa fa-calendar-times-o" aria-hidden="true"></i> Eliminar</a>
                         </div>
                         <div class="col-sm-6">
 													<button type="button" name="button" class="btn btn-warning btn-sm" (click)="cargarPendiente(pendiente.id,'Actualizar')"><i class="fa fa-calendar" aria-hidden="true"></i> Editar</button>
