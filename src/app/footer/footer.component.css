@@ -1,0 +1,11 @@
+/*footer{
+  background: #69D8F3;
+}*/
+footer {
+  background-color:#85C1E9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+}
