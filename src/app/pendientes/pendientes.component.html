@@ -8,7 +8,8 @@
 					 <div class="row">
   			  	 <div class="col-lg-6">
 							 <button type="button" (click)="mostrarNewEdit('Nuevo')" class="btn btn-primary"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Nuevo</button>
-   		 	     </div>
+               <br>
+						 </div>
              <div class="col-lg-6">
                 <div class="input-group">
                   <span class="input-group-btn">
@@ -25,19 +26,17 @@
 					 <div>
 						  <p>Numero de Pendientes registrados:{{pendientes.length}}</p>
 					 </div>
+					 <div class="table-responsive">
            <table class="table table-bordered" *ngIf="pendientes?.length>0">
              <thead class="thead-light">
                <tr>
-                 <th scope="col">Id</th>
-                 <th scope="col">Nombre</th>
+								 <th scope="col">Nombre</th>
                  <th scope="col">Descripcion</th>
                  <th width="200px"></th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let pendiente of pendientes|filter:filter| paginate: { itemsPerPage: 5, currentPage: numfilas };">
-                <th scope="row">{{pendiente.id}}</th>
-                <th>{{pendiente.nombre}}</th>
+              <tr *ngFor="let pendiente of pendientes|filter:filter| paginate: { itemsPerPage: 5, currentPage: numfilas };">                <th>{{pendiente.nombre}}</th>
                 <th>{{pendiente.descripcion}}</th>
                 <th >
                   <div class="divBotones" *ngIf="confirmar==null">
@@ -64,6 +63,7 @@
               </tr>
             </tbody>
            </table>
+					 </div>
 					 <pagination-controls (pageChange)="numfilas = $event"></pagination-controls>
 
          </div>
